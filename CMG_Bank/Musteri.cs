@@ -30,7 +30,7 @@ namespace CMG_Bank
             this.sifre = sifre;
             Hesaplar = new List<Hesap>();
         }
-        public bool GizliSoruKontrol(string GizliSoruCevabi)
+        public virtual bool GizliSoruKontrol(string GizliSoruCevabi)
         {
             if(this.gizliSoruCevabi == GizliSoruCevabi)
             {
@@ -38,7 +38,7 @@ namespace CMG_Bank
             }
             return false;
         }
-        public bool GirisYap(long MusteriNo, string gelenSifre)
+        public virtual bool GirisYap(long MusteriNo, string gelenSifre)
         {
             if (this.MusteriNo == MusteriNo && gelenSifre == sifre)
             {
@@ -46,11 +46,11 @@ namespace CMG_Bank
             }
             return false;
         }
-        public void SifreDegistir(string yeniSifre)
+        public virtual void SifreDegistir(string yeniSifre)
         {
             this.sifre = yeniSifre;
         }
-        public void HesapEkle(Hesap H)
+        public virtual void HesapEkle(Hesap H)
         {
             Hesaplar.Add(H);
         }

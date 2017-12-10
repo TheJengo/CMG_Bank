@@ -13,11 +13,14 @@ namespace CMG_Bank
         public DateTime OlusturmaTarihi { get; private set; }
         public long HesapNo { get; private set; }
 
+        public List<Islem> HesapIslemleri { get; set; }
+
         public Hesap()
         {
             this.Bakiye = 0;
             this.Status = "Aktif";
             this.OlusturmaTarihi = DateTime.Now;
+            this.HesapIslemleri = new List<Islem>();
         }
         public bool HesapKapama()
         {
@@ -32,8 +35,38 @@ namespace CMG_Bank
         {
 
         }
-        public void IslemYap(){
-
+        public bool IslemYap(Islem yapilanIslem)
+        {
+            /* Para Yatırma İşlemi */
+            if (yapilanIslem is Yatir)
+            {
+                this.Bakiye += yapilanIslem.Miktar;
+                return true;
+            }
+            /* Para Çekme İşlemi */
+            if(yapilanIslem is Cek)
+            {
+                if (yapilanIslem.Miktar < 750 && yapilanIslem.Miktar > 0)
+                {
+                    this.Bakiye -= yapilanIslem.Miktar;
+                    return true;
+                }
+            }
+            if(yapilanIslem is Havale)
+            {
+                Havale yapilanHavale =(Havale) yapilanIslem;
+                if (this.HesapNo == yapilanIslem.HesapNo)
+                {
+                    if (this.Bakiye >= yapilanHavale.Miktar)
+                    {
+                        this.Bakiye -= yapilanHavale.Miktar;
+                        yapilanHavale.aliciHesap.Bakiye += yapilanHavale.Miktar;
+                        yapilanHavale.aliciHesap.HesapIslemleri.Add(yapilanHavale);
+                        return true;
+                    }
+                }
+            }
+            return false;
         }
 
     }
