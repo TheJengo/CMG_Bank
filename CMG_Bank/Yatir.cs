@@ -8,13 +8,13 @@ namespace CMG_Bank
 {
     public class Yatir : Islem
     {
-        public Yatir(long HesapNo,decimal Miktar) : base(HesapNo,Miktar)
+        public Yatir(string HesapNo,decimal Miktar) : base(HesapNo,Miktar)
         {
 
         }
-        public override string Rapor(bool islemSonucu)
+        public override string Rapor()
         {
- 	        if(islemSonucu == true)
+ 	        if(this.islemSonucu == true)
             {
                 return "Hesabınıza yapmış olduğunuz, "+Miktar+" TL yatırma işlemi başarıyla tamamlandı!";
             }

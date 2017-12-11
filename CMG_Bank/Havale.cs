@@ -10,13 +10,13 @@ namespace CMG_Bank
     {
         public Hesap aliciHesap { get; private set; }
 
-        public Havale(long HesapNo, decimal Miktar, Hesap aliciHesap ) : base(HesapNo,Miktar)
+        public Havale(string HesapNo, decimal Miktar, Hesap aliciHesap ) : base(HesapNo,Miktar)
         {
             this.aliciHesap = aliciHesap;
         }
-        public override string Rapor(bool islemSonucu)
+        public override string Rapor()
         {
- 	        if(islemSonucu == true)
+ 	        if(this.islemSonucu == true)
             {
                 return "Havale işlemi yaptığınız "+aliciHesap.HesapNo + "'lu kişiye "+Miktar+" TL Havale yapılmıştır.";
             }

@@ -8,14 +8,14 @@ namespace CMG_Bank
 {
     public class Cek : Islem
     {
-        public Cek(long HesapNo,decimal Miktar) : base(HesapNo,Miktar)
+        public Cek(string HesapNo,decimal Miktar) : base(HesapNo,Miktar)
         {
 
         }
      
- 	   public override string Rapor(bool islemSonucu)
+ 	   public override string Rapor()
         {
- 	        if(islemSonucu == true)
+ 	        if(this.islemSonucu == true)
             {
                 return Miktar+" TL Para Çekme işlemi başarısız.";
             }

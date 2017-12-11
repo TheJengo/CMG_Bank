@@ -15,7 +15,7 @@ namespace CMG_Bank
         public string GizliSoru { get; private set; }
 
         private string gizliSoruCevabi;
-        public int MusteriNo { get; private set; }
+        public string MusteriNo { get; private set; }
 
         private string sifre;
         public Musteri(string Ad, string Soyad, long TCKNO, long TelNo, string Adres, string AnneKizlikSoyadi, string GizliSoru, string gizliSoruCevabi, string sifre)
@@ -26,7 +26,6 @@ namespace CMG_Bank
             this.TelNo = TelNo;
             this.GizliSoru = GizliSoru;
             this.gizliSoruCevabi = gizliSoruCevabi;
-            this.MusteriNo = 123;
             this.sifre = sifre;
             Hesaplar = new List<Hesap>();
         }
@@ -38,7 +37,7 @@ namespace CMG_Bank
             }
             return false;
         }
-        public virtual bool GirisYap(long MusteriNo, string gelenSifre)
+        public virtual bool GirisYap(string MusteriNo, string gelenSifre)
         {
             if (this.MusteriNo == MusteriNo && gelenSifre == sifre)
             {
@@ -54,7 +53,10 @@ namespace CMG_Bank
         {
             Hesaplar.Add(H);
         }
-
+        public virtual void NumaraAl(string MusteriNo)
+        {
+            this.MusteriNo = MusteriNo;
+        }
         //public void HesapKapama(Hesap kapatilanHesap)
         //{
         //    foreach (Hesap H in Hesaplar)
