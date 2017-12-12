@@ -59,6 +59,7 @@
     </Compile>
     <Compile Include="Havale.cs" />
     <Compile Include="Hesap.cs" />
+    <Compile Include="IIslenebilen.cs" />
     <Compile Include="Islem.cs" />
     <Compile Include="Kimlik.cs" />
     <Compile Include="Musteri.cs" />

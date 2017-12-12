@@ -20,12 +20,14 @@ namespace CMG_Bank
         private List<Hesap> Hesaplar;
         private List<Personel> Personeller;
         private List<Musteri> Musteriler;
+        private List<Islem> Islemler;
 
         private Banka()
         {
-            Hesaplar = new List<Hesap>();
             Personeller = new List<Personel>();
             Musteriler = new List<Musteri>();
+            Hesaplar = new List<Hesap>();
+            Islemler = new List<Islem>();
         }
         public static Banka BankaBilgisiGetir()
         {
@@ -41,9 +43,9 @@ namespace CMG_Bank
             string geciciMusteriNo = "";
             do{
                geciciMusteriNo = SayiUret(4, 2);
-               foreach (Musteri musteri in Musteriler)
+               foreach (Musteri _Musteri in Musteriler)
                {
-                   if (musteri.MusteriNo == geciciMusteriNo)
+                   if (_Musteri.MusteriNo == geciciMusteriNo)
                     {
                         break;
                     }
@@ -57,33 +59,31 @@ namespace CMG_Bank
         {
             return this.Musteriler;
         }
-        public  string[] HesapNumarasiOlustur()
+        public void HesapNumarasiOlustur(Hesap H)
         {
             int musteriSayac = 0, hesapSayac = 0;
-            string[] geciciNumaralar = new string[2];
+            string geciciNumara = "";
             do
             {
-                geciciNumaralar[0] = SayiUret(3, 4); //Hesap No
-                geciciNumaralar[1] = SayiUret(1, 4); // Ek Hesap No
+                geciciNumara = SayiUret(3, 4); //Hesap No
                 foreach (Musteri _Musteri in Musteriler)
                 {   
-                   foreach(Hesap _Hesap in _Musteri.Hesaplar)
+                   foreach(Hesap _Hesap in _Musteri.HesaplariGetir())
                    {
-                       if (_Hesap.HesapNo == geciciNumaralar[0] && _Hesap.ArtiHesap.No == geciciNumaralar[1])
-                       {
-                           break;
-                       }
-                       hesapSayac++;
+                        if (_Hesap.HesapNo == geciciNumara)
+                        {
+                            break;
+                        }
+                        hesapSayac++;
                    }
-                   if (_Musteri.Hesaplar.Count != hesapSayac)
+                   if (_Musteri.HesaplariGetir().Count != hesapSayac)
                    {
                        break;
                    }
                    musteriSayac++;
                 } 
             } while (Musteriler.Count != musteriSayac);
-            return geciciNumaralar;
-
+            H.NumaraAl(geciciNumara);
         }
         public void BilgileriDuzenle(string Adi, int BankaKodu, decimal KaynakPara)
         {
@@ -99,6 +99,18 @@ namespace CMG_Bank
                 temp += getRandom.Next(0, Convert.ToInt32((Math.Pow(10,basamakSayisi))-1)).ToString("D"+basamakSayisi);
             }
             return temp;
+        }
+        public void Gelirler(Yatir _Yatir)
+        {
+            this.Gelir += _Yatir.Miktar;          
+        }
+        public void Giderler(Cek _Cek)
+        {
+            this.Gider -= _Cek.Miktar;
+        }
+        public List<Islem> Rapor()
+        {
+            return Islemler;
         }
 
     }

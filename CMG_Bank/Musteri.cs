@@ -8,7 +8,7 @@ namespace CMG_Bank
 {
     public abstract class Musteri : Kimlik
     {
-        public List<Hesap> Hesaplar { get; private set; }
+        private List<Hesap> Hesaplar;
         public long TelNo { get; private set; }
         public string Adres { get; private set; }
         public string AnneKizlikSoyadi { get; set; }
@@ -57,15 +57,9 @@ namespace CMG_Bank
         {
             this.MusteriNo = MusteriNo;
         }
-        //public void HesapKapama(Hesap kapatilanHesap)
-        //{
-        //    foreach (Hesap H in Hesaplar)
-        //    {
-        //        if(kapatilanHesap == H && H.HesapKapama() == true)
-        //        {
-        //            H.Status = "Pasif";
-        //        }
-        //    }
-        //}
+        public virtual List<Hesap> HesaplariGetir()
+        {
+            return this.Hesaplar;
+        }
     }
 }

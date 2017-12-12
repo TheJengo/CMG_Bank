@@ -21,13 +21,21 @@ namespace CMG_Bank
             this.Status = "Aktif";
             this.OlusturmaTarihi = DateTime.Now;
             this.HesapIslemleri = new List<Islem>();
+            Banka.BankaBilgisiGetir().HesapNumarasiOlustur(this);
+        }
+        public void NumaraAl(string gelenNumara)
+        {
+            this.HesapNo = gelenNumara;
         }
         public bool HesapKapama()
         {
-            if(Bakiye == 0)
+            if(this.Bakiye == 0)
             {
-                this.Status = "Pasif";
-                return true;
+                if (this.ArtiHesap == null)
+                {
+                    this.Status = "Pasif";
+                    return true;
+                } 
             }
             return false;
         }
@@ -82,6 +90,10 @@ namespace CMG_Bank
             }
             yapilanIslem.islemSonucu = false;
             return false;
+        }
+        public void EkHesapAc()
+        {
+            this.ArtiHesap = new EkHesap();
         }
 
     }
