@@ -93,7 +93,7 @@ namespace CMG_Bank
         }
         public void EkHesapAc()
         {
-            this.ArtiHesap = new EkHesap();
+          //  this.ArtiHesap = new EkHesap();
         }
 
     }
