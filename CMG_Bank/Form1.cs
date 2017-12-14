@@ -38,7 +38,7 @@ namespace CMG_Bank
             MessageBox.Show(h3.HesapIslemleri.Count.ToString());
             if(A1.GizliSoruKontrol(txtGizli.Text) == true)
             {
-                int i = 0;
+                //int i = 0;
                 foreach (Hesap h2 in A1.HesaplariGetir())
                 {
                     MessageBox.Show(h2.HesapNo);
