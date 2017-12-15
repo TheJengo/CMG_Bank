@@ -57,7 +57,7 @@ namespace CMG_Bank
         {
             this.MusteriNo = MusteriNo;
         }
-        public virtual List<Hesap> HesaplariGetir()
+        public virtual List<Hesap> Hesaplarim()
         {
             return this.Hesaplar;
         }

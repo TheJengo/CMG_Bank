@@ -49,7 +49,7 @@ namespace CMG_Bank
         }    
         public List<Islem> HesapOzeti()
         {
-            Banka.BankaBilgisiGetir().Gelirler(new Yatir("123",2.30M));
+            Banka.BankaBilgisiGetir().SeciliSube().SeciliHesap().IslemYap((new Yatir(Banka.BankaBilgisiGetir().SeciliSube().Hesaplar.ElementAt(0).HesapNo,2.30M)));
             return this.HesapIslemleri;
         }
         public bool IslemYap(Islem yapilanIslem)
@@ -59,6 +59,7 @@ namespace CMG_Bank
             /* Para Yatırma İşlemi */
             if (yapilanIslem is Yatir)
             {
+                Banka.BankaBilgisiGetir().SeciliSube().SeciliHesap().IslemYap((new Yatir(Banka.BankaBilgisiGetir().SeciliSube().Hesaplar.ElementAt(0).HesapNo, yapilanIslem.Miktar)));
                 this.odenecekTutar -= yapilanIslem.Miktar;
                 return true;
             }
@@ -67,7 +68,7 @@ namespace CMG_Bank
             {
                 if (this.odenecekTutar > yapilanIslem.Miktar && yapilanIslem.Miktar > 0)
                 {
-                    Banka.BankaBilgisiGetir().Gelirler(new Yatir("123", 2.30M));
+                    Banka.BankaBilgisiGetir().SeciliSube().SeciliHesap().IslemYap((new Yatir(Banka.BankaBilgisiGetir().SeciliSube().Hesaplar.ElementAt(0).HesapNo, 2.30M)));
                     this.odenecekTutar += yapilanIslem.Miktar;
                     return true;
                 }

@@ -91,9 +91,9 @@ namespace CMG_Bank
             yapilanIslem.islemSonucu = false;
             return false;
         }
-        public void EkHesapAc()
+        public void EkHesapAc(DateTime VadeTarihi, decimal Limit)
         {
-          //  this.ArtiHesap = new EkHesap();
+            this.ArtiHesap = new EkHesap(VadeTarihi, Limit);
         }
 
     }

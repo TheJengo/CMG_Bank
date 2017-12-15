@@ -9,6 +9,7 @@ namespace CMG_Bank
     public class Banka
     {
         private Random getRandom = new Random();
+        private int aktifSubeIndeksi;
         public decimal KaynakPara { get; private set; }
         public string Adi { get; private set; }
         public int BankaKodu { get; private set; }
@@ -17,7 +18,7 @@ namespace CMG_Bank
 
         private static Banka BankaNesnesi;
 
-        private List<Hesap> Hesaplar;
+        private List<Sube> Subeler;
         private List<Personel> Personeller;
         private List<Musteri> Musteriler;
         private List<Islem> Islemler;
@@ -26,7 +27,7 @@ namespace CMG_Bank
         {
             Personeller = new List<Personel>();
             Musteriler = new List<Musteri>();
-            Hesaplar = new List<Hesap>();
+            Subeler = new List<Sube>();
             Islemler = new List<Islem>();
         }
         public static Banka BankaBilgisiGetir()
@@ -36,6 +37,48 @@ namespace CMG_Bank
                 BankaNesnesi = new Banka();
             }
             return BankaNesnesi;
+        }
+        public Sube SeciliSube()
+        {
+            if (this.Subeler.Count > aktifSubeIndeksi && aktifSubeIndeksi >= 0)
+                return Subeler.ElementAt(aktifSubeIndeksi);
+            else
+                return null;
+        }
+        public void SubeIndeksi(string SubeKodu)
+        {
+            int subeIndeksi = 0;
+            foreach (Sube _Sube in Subeler)
+            {               
+                if (_Sube.SubeKodu == SubeKodu)
+                {
+                    this.aktifSubeIndeksi = subeIndeksi;
+                }
+                subeIndeksi++;
+            }
+        }
+        public List<Sube> SubeListesi()
+        {
+            return this.Subeler;
+        }
+        public void SubeEkle(Sube S)
+        {
+            int subeSayac = 0;
+            string geciciSubeKodu = "";
+            do
+            {
+                geciciSubeKodu = SayiUret(5, 1);
+                foreach (Sube _Sube in Subeler)
+                {
+                    if (_Sube.SubeKodu == geciciSubeKodu)
+                    {
+                        break;
+                    }
+                    subeSayac++;
+                }
+            } while (Subeler.Count != subeSayac);
+            S.KodAl(geciciSubeKodu);
+            Subeler.Add(S);
         }
         public void MusteriEkle(Musteri M)
         {
@@ -68,7 +111,7 @@ namespace CMG_Bank
                 geciciNumara = SayiUret(3, 4); //Hesap No
                 foreach (Musteri _Musteri in Musteriler)
                 {   
-                   foreach(Hesap _Hesap in _Musteri.HesaplariGetir())
+                   foreach(Hesap _Hesap in _Musteri.Hesaplarim())
                    {
                         if (_Hesap.HesapNo == geciciNumara)
                         {
@@ -76,7 +119,7 @@ namespace CMG_Bank
                         }
                         hesapSayac++;
                    }
-                   if (_Musteri.HesaplariGetir().Count != hesapSayac)
+                   if (_Musteri.Hesaplarim().Count != hesapSayac)
                    {
                        break;
                    }

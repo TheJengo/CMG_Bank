@@ -9,7 +9,7 @@ namespace CMG_Bank
     public class Personel : Kimlik
     {
         public DateTime IseAlimTarihi { get; private set; }
-        public long PersonelNo { get; private set; }
+        public string PersonelNo { get; private set; }
         public decimal Maas { get; set; }
 
         private string sifre;
@@ -19,7 +19,7 @@ namespace CMG_Bank
             this.sifre = sifre;
             IseAlimTarihi = DateTime.Now;
         }
-        public bool GirisYap(long PersonelNo, string gelenSifre)
+        public bool GirisYap(string PersonelNo, string gelenSifre)
         {
             if (this.PersonelNo == PersonelNo && gelenSifre == sifre)
             {
@@ -30,6 +30,10 @@ namespace CMG_Bank
         public void SifreDegistir(string yeniSifre)
         {
             this.sifre = yeniSifre;
+        }
+        public void PersonelNoAl(string gelenNo)
+        {
+            this.PersonelNo = gelenNo;
         }
         
     }

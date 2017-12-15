@@ -16,8 +16,7 @@ namespace CMG_Bank
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Giris_Ekrani());
-
+            Application.Run(new Form1());
         }
     }
 }
