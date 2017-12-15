@@ -20,6 +20,8 @@ namespace CMG_Bank
 {
     public partial class Giris_Ekrani : MaterialSkin.Controls.MaterialForm
     {
+        Banka CMG = Banka.BankaBilgisiGetir();
+        Sube Izmir = new Sube();
         public Giris_Ekrani()
         {
             InitializeComponent();
@@ -28,35 +30,45 @@ namespace CMG_Bank
             skinMenager.Theme = MaterialSkin.MaterialSkinManager.Themes.DARK;
             skinMenager.ColorScheme = new MaterialSkin.ColorScheme(MaterialSkin.Primary.Grey600, MaterialSkin.Primary.BlueGrey900, MaterialSkin.Primary.Blue500, MaterialSkin.Accent.Orange700, MaterialSkin.TextShade.WHITE);
         }
-        
-        private void Giris_Ekrani_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void bunifuGradientPanel3_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuGradientPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        
-
-        
 
         
         private void bunifuImageButton1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+        private void btnMusteriGiris_Click(object sender, EventArgs e)
+        {
+
+            foreach (Musteri _Musteri in CMG.MusteriListele())
+            {
+                if (_Musteri.MusteriNo == txtBireyselNo.Text && _Musteri is Bireysel)
+                {
+                    if (_Musteri.GirisYap(txtBireyselNo.Text, txtBireyselSifre.Text))
+                    {
+                        //MusteriPanelini AçM
+                        MessageBox.Show("Test");
+                    }
+                }
+            }
+            lblBireyselSonuc.Visible = true;
+        }
+   
+        private void btnTicariGiris_Click(object sender, EventArgs e)
+        {
+            foreach (Musteri _Musteri in CMG.MusteriListele())
+            {
+                if (_Musteri.MusteriNo == txtTicariNo.Text && _Musteri is Ticari)
+                {
+                    if (_Musteri.GirisYap(txtTicariNo.Text, txtTicariSifre.Text))
+                    {
+                        //MusteriPanelini Aç
+
+                        MessageBox.Show("Test");
+                    }
+                }
+            }
+            lblTicariSonuc.Visible = true;
+        } 
     }
 }

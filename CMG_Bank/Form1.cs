@@ -32,9 +32,11 @@ namespace CMG_Bank
             Izmir.HesapEkle(h3);
             A1.HesapEkle(h1);
             CMG.MusteriEkle(A1);
+
+            CMG.MusteriEkle(A2);
             A1.Hesaplarim().ElementAt(0).EkHesapAc(DateTime.Now, 3000M);
             txtGizli.Text = CMG.SubeListesi().ElementAt(0).SubeKodu;
-            txtPass.Text = CMG.SeciliSube().Hesaplar.ElementAt(0).HesapNo.ToString();
+            txtPass.Text = A1.MusteriNo.ToString();
             MessageBox.Show(A1.Hesaplarim().ElementAt(0).ArtiHesap.Limit.ToString());
             A1.Hesaplarim().ElementAt(0).ArtiHesap.IslemYap(new Yatir(CMG.SeciliSube().SeciliHesap().HesapNo,2000));
             
@@ -43,7 +45,11 @@ namespace CMG_Bank
         private void btnGiris_Click(object sender, EventArgs e)
         {
             CMG.SubeIndeksi(txtNo.Text);
-            MessageBox.Show(CMG.SeciliSube().SeciliHesap().Bakiye.ToString());
+            //MessageBox.Show(CMG.SeciliSube().SeciliHesap().Bakiye.ToString());
+            Giris_Ekrani frm = new Giris_Ekrani();
+            frm.ShowDialog();
+            this.Close();
+            
         }
         
     }

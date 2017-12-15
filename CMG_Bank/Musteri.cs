@@ -39,7 +39,7 @@ namespace CMG_Bank
         }
         public virtual bool GirisYap(string MusteriNo, string gelenSifre)
         {
-            if (this.MusteriNo == MusteriNo && gelenSifre == sifre)
+            if (this.MusteriNo == MusteriNo && sifre == gelenSifre )
             {
                 return true;
             }

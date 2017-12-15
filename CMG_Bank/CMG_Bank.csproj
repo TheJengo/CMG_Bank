@@ -32,6 +32,10 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
     <Reference Include="MaterialSkin">
       <HintPath>..\..\..\..\MaterialSkin_Testing\packages\MaterialSkin.0.2.1\lib\MaterialSkin.dll</HintPath>
     </Reference>
@@ -57,6 +61,12 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Giris_Ekrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Giris_Ekrani.Designer.cs">
+      <DependentUpon>Giris_Ekrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="Havale.cs" />
     <Compile Include="Hesap.cs" />
     <Compile Include="IIslenebilen.cs" />
@@ -71,6 +81,9 @@
     <Compile Include="Yatir.cs" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Giris_Ekrani.resx">
+      <DependentUpon>Giris_Ekrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
