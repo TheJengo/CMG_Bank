@@ -14,6 +14,8 @@ namespace CMG_Bank
         public string AnneKizlikSoyadi { get; set; }
         public string GizliSoru { get; private set; }
 
+        private int aktifHesapIndeksi;
+
         private string gizliSoruCevabi;
         public string MusteriNo { get; private set; }
 
@@ -60,6 +62,26 @@ namespace CMG_Bank
         public virtual List<Hesap> Hesaplarim()
         {
             return this.Hesaplar;
+        }
+        public void HesapIndeksi(string HesapNo)
+        {
+            int hesapIndeksi = 0;
+            foreach (Hesap _Hesap in Hesaplar)
+            {
+                if (_Hesap.HesapNo == HesapNo)
+                {
+                    this.aktifHesapIndeksi = hesapIndeksi;
+                }
+
+                hesapIndeksi++;
+            }
+        }
+        public Hesap SeciliHesap()
+        {
+            if (this.Hesaplar.Count > aktifHesapIndeksi && aktifHesapIndeksi >= 0)
+                return Hesaplar.ElementAt(aktifHesapIndeksi);
+            else
+                return null;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace CMG_Bank
     public class Banka
     {
         private Random getRandom = new Random();
+
         private int aktifSubeIndeksi;
         public decimal KaynakPara { get; private set; }
         public string Adi { get; private set; }

@@ -27,8 +27,8 @@ namespace CMG_Bank
         Hesap h3;
         private void mtrlIlerle_Click(object sender, EventArgs e)
         {
-            h3 = new Hesap();
-            h1 = new Hesap();
+            h3 = new Doviz("USD");
+            h1 = new TRY();
             Izmir.HesapEkle(h3);
             A1.HesapEkle(h1);
             CMG.MusteriEkle(A1);

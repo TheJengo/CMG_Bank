@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CMG_Bank
 {
-    public class Hesap
+    public abstract class Hesap
     {
         public decimal Bakiye { get; private set; }
         public string Status { get; private set; }
@@ -14,6 +14,7 @@ namespace CMG_Bank
         public string HesapNo { get; private set; }
         public EkHesap ArtiHesap { get; set; }
         public List<Islem> HesapIslemleri { get; private set; }
+        public string ParaBirimi { get; set; }
 
         public Hesap()
         {
@@ -22,6 +23,7 @@ namespace CMG_Bank
             this.OlusturmaTarihi = DateTime.Now;
             this.HesapIslemleri = new List<Islem>();
             Banka.BankaBilgisiGetir().HesapNumarasiOlustur(this);
+            this.ParaBirimi = "TRY";
         }
         public void NumaraAl(string gelenNumara)
         {
@@ -82,7 +84,23 @@ namespace CMG_Bank
                     if (this.Bakiye >= yapilanHavale.Miktar && this.Bakiye > 0)
                     {
                         this.Bakiye -= yapilanHavale.Miktar;
-                        yapilanHavale.aliciHesap.Bakiye += yapilanHavale.Miktar;
+                        decimal dovizHavalesi = yapilanHavale.Miktar;
+                        if (yapilanHavale.aliciHesap is Doviz)
+                        {                            
+                            Doviz alici =(Doviz) yapilanHavale.aliciHesap;
+                            if(this is Doviz)
+                            {
+                                Doviz gonderen = (Doviz) this;
+                                dovizHavalesi *= alici.Kur;
+                                dovizHavalesi /= gonderen.Kur;
+                     
+                            }
+                            else
+                            {
+                                dovizHavalesi *= alici.Kur;  
+                            }
+                        }
+                        yapilanHavale.aliciHesap.Bakiye += dovizHavalesi;
                         yapilanHavale.aliciHesap.HesapIslemleri.Add(yapilanHavale);
                         return true;
                     }
@@ -91,10 +109,7 @@ namespace CMG_Bank
             yapilanIslem.islemSonucu = false;
             return false;
         }
-        public void EkHesapAc(DateTime VadeTarihi, decimal Limit)
-        {
-            this.ArtiHesap = new EkHesap(VadeTarihi, Limit);
-        }
 
+        public virtual void EkHesapAc(DateTime VadeTarihi, decimal Limit){}
     }
 }

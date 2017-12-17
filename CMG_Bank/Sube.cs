@@ -11,6 +11,7 @@ namespace CMG_Bank
         public string SubeKodu { get; set; }
         public List<Hesap> Hesaplar { get; private set; }
         public List<Personel> Personeller { get; private set; }
+
         private int aktifHesapIndeksi;
         public decimal Gelir { get; private set; }
         public decimal Gider { get; private set; }
