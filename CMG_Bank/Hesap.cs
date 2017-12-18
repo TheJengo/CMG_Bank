@@ -55,6 +55,11 @@ namespace CMG_Bank
                 this.Bakiye += yapilanIslem.Miktar;
                 return true;
             }
+            ///* Ek Hesap Takviyesi */
+            //if (ArtiHesap != null && this.Bakiye < yapilanIslem.Miktar )
+            //{
+            //    this.IslemYap(new Havale(this.ArtiHesap.HesapNo, this.ArtiHesap.Bakiye, this));
+            //}
             /* Para Çekme İşlemi */
             if(yapilanIslem is Cek)
             {
@@ -91,13 +96,12 @@ namespace CMG_Bank
                             if(this is Doviz)
                             {
                                 Doviz gonderen = (Doviz) this;
-                                dovizHavalesi *= alici.Kur;
-                                dovizHavalesi /= gonderen.Kur;
-                     
+                                dovizHavalesi *= Banka.BankaBilgisiGetir().KurGetir(alici.ParaBirimi);
+                                dovizHavalesi /= Banka.BankaBilgisiGetir().KurGetir(gonderen.ParaBirimi);                    
                             }
                             else
                             {
-                                dovizHavalesi *= alici.Kur;  
+                                dovizHavalesi *= Banka.BankaBilgisiGetir().KurGetir(alici.ParaBirimi);  
                             }
                         }
                         yapilanHavale.aliciHesap.Bakiye += dovizHavalesi;

@@ -20,15 +20,15 @@ namespace CMG_Bank
         private static Banka BankaNesnesi;
 
         private List<Sube> Subeler;
-        private List<Personel> Personeller;
         private List<Musteri> Musteriler;
+        private List<Kur> Kurlar;
         private List<Islem> Islemler;
 
         private Banka()
         {
-            Personeller = new List<Personel>();
             Musteriler = new List<Musteri>();
             Subeler = new List<Sube>();
+            Kurlar = new List<Kur>();
             Islemler = new List<Islem>();
         }
         public static Banka BankaBilgisiGetir()
@@ -58,10 +58,6 @@ namespace CMG_Bank
                 subeIndeksi++;
             }
         }
-        public List<Sube> SubeListesi()
-        {
-            return this.Subeler;
-        }
         public void SubeEkle(Sube S)
         {
             int subeSayac = 0;
@@ -80,6 +76,43 @@ namespace CMG_Bank
             } while (Subeler.Count != subeSayac);
             S.KodAl(geciciSubeKodu);
             Subeler.Add(S);
+        } 
+        public List<Sube> SubeListesi()
+        {
+            return this.Subeler;
+        }     
+        public bool KurEkle(Kur K)
+        {
+            int kurIndeksi = 0;
+            foreach (Kur _Kur in Kurlar)
+	        {
+		         if(_Kur.BirimKodu ==  K.BirimKodu )
+                 {
+                     break;
+                 }
+                 kurIndeksi++;
+            }
+            if (kurIndeksi != Kurlar.Count)
+            {
+                return false;
+            }
+            Kurlar.Add(K);
+            return true;        
+        }
+        public decimal KurGetir(string ParaBirimi)
+        {
+            foreach (Kur _Kur in Kurlar)
+            {
+                if (_Kur.ParaBirimi == ParaBirimi)
+                {
+                    return _Kur.Oran;
+                }
+            }
+            return 1;
+        }
+        public List<Kur> KurListesi()
+        {
+            return this.Kurlar;
         }
         public void MusteriEkle(Musteri M)
         {
@@ -144,17 +177,28 @@ namespace CMG_Bank
             }
             return temp;
         }
-        public void Gelirler(Yatir _Yatir)
-        {
-            this.Gelir += _Yatir.Miktar;          
-        }
-        public void Giderler(Cek _Cek)
-        {
-            this.Gider -= _Cek.Miktar;
-        }
         public List<Islem> Rapor()
         {
-            return Islemler;
+            foreach (Sube _Sube in SubeListesi())
+            {
+                foreach (Hesap _Hesap in _Sube.Hesaplar)
+                {
+                    foreach (Islem _Islem in _Hesap.HesapIslemleri)
+                    {
+                        if (_Islem is Yatir)
+                        {
+                            this.Islemler.Add(_Islem);
+                            this.Gelir += _Islem.Miktar;
+                        }
+                        if (_Islem is Cek)
+                        {
+                            this.Islemler.Add(_Islem);
+                            this.Gider -= _Islem.Miktar;
+                        }
+                    }
+                }
+            }
+            return this.Islemler;
         }
 
     }

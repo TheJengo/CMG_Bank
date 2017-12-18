@@ -69,6 +69,27 @@ namespace CMG_Bank
                 }
             }
             lblTicariSonuc.Visible = true;
+        }
+
+        private void btnPersonelGiris_Click(object sender, EventArgs e)
+        {
+
+            foreach (Sube _Sube in CMG.SubeListesi())
+            {
+                foreach (Personel _Personel in _Sube.PersonelListesi())
+                {
+                    if (_Personel.PersonelNo == txtPersonelNo.Text)
+                    {
+                        if (_Personel.GirisYap(txtPersonelNo.Text, txtPersonelSifre.Text))
+                        {
+                            this.Close();
+                            Personel_Ekrani frmPersonel = new Personel_Ekrani();
+                            frmPersonel.Show();
+                        }
+                    }
+                }
+             }
+           lblTicariSonuc.Visible = true;
         } 
     }
 }

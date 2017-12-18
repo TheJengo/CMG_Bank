@@ -25,10 +25,13 @@ namespace CMG_Bank
         
         Hesap h1;
         Hesap h3;
+        Hesap h4;
         private void mtrlIlerle_Click(object sender, EventArgs e)
         {
             h3 = new Doviz("USD");
             h1 = new TRY();
+            h4 = new Doviz("Dolar");
+            A2.HesapEkle(h4);
             Izmir.HesapEkle(h3);
             A1.HesapEkle(h1);
             CMG.MusteriEkle(A1);
@@ -39,15 +42,30 @@ namespace CMG_Bank
             txtPass.Text = A1.MusteriNo.ToString();
             MessageBox.Show(A1.Hesaplarim().ElementAt(0).ArtiHesap.Limit.ToString());
             A1.Hesaplarim().ElementAt(0).ArtiHesap.IslemYap(new Yatir(CMG.SeciliSube().SeciliHesap().HesapNo,2000));
+            Personel A3 = new Personel("Cengiz", "Cebeci", 30151295680, 3000, "1234");
+            A1.Hesaplarim().ElementAt(0).ArtiHesap.HesapOzeti();
+            Izmir.PersonelEkle(A3);
+            txtNo.Text = A3.PersonelNo.ToString();
             
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
         {
-            CMG.SubeIndeksi(txtNo.Text);
+            Kur dolar = new Kur("Dolar","USD",'$' ,3.85545M);
+            Kur pound = new Kur("Pound", "GBP", '£',4.53245M);
+            CMG.KurEkle(dolar);
+            CMG.KurEkle(pound); 
+            A1.HesapIndeksi(A1.Hesaplarim().ElementAt(0).HesapNo);
+            //A1.SeciliHesap().IslemYap(new Yatir(A1.Hesaplarim().ElementAt(0).HesapNo, 1000));
+            A1.SeciliHesap().IslemYap(new Havale(A1.SeciliHesap().HesapNo,100,A2.Hesaplarim().ElementAt(0)));
+            MessageBox.Show(A2.Hesaplarim().ElementAt(0).Bakiye.ToString());
+            CMG.SubeIndeksi(txtGizli.Text);
             //MessageBox.Show(CMG.SeciliSube().SeciliHesap().Bakiye.ToString());
+            MessageBox.Show(CMG.SeciliSube().SeciliHesap().Bakiye.ToString());
+            MessageBox.Show(CMG.Rapor().ElementAt(3).Miktar.ToString());
+            MessageBox.Show(CMG.Gelir.ToString()); 
             Giris_Ekrani frm = new Giris_Ekrani();
-            frm.ShowDialog();
+           // frm.ShowDialog();
             this.Close();
             
         }

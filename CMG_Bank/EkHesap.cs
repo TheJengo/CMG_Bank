@@ -16,6 +16,7 @@ namespace CMG_Bank
         public decimal Limit { get; private set; }
 
         private decimal odenecekTutar;
+        public decimal Bakiye { get; private set; }
         public DateTime OlusturmaTarihi { get; private set; }
         public DateTime VadeTarihi { get; set; }
         private List<Islem> HesapIslemleri;
@@ -29,7 +30,7 @@ namespace CMG_Bank
             this.FaizTutari = FaizTutariHesapla();
             this.VergiTutari = VergiTutariHesapla();
             this.odenecekTutar = Limit + FaizTutari;
-            Banka.BankaBilgisiGetir().Giderler(new Cek("123",Limit));
+            Banka.BankaBilgisiGetir().SeciliSube().SeciliHesap().IslemYap(new Cek(Banka.BankaBilgisiGetir().SeciliSube().Hesaplar.ElementAt(0).HesapNo, Limit));
         }
         public bool HesapKapama()
         {
@@ -66,9 +67,10 @@ namespace CMG_Bank
             /* Para Çekme İşlemi */
             if (yapilanIslem is Cek)
             {
-                if (this.odenecekTutar > yapilanIslem.Miktar && yapilanIslem.Miktar > 0)
+                if (this.Bakiye > yapilanIslem.Miktar && yapilanIslem.Miktar > 0)
                 {
                     Banka.BankaBilgisiGetir().SeciliSube().SeciliHesap().IslemYap((new Yatir(Banka.BankaBilgisiGetir().SeciliSube().Hesaplar.ElementAt(0).HesapNo, 2.30M)));
+                    this.Bakiye -= yapilanIslem.Miktar;
                     this.odenecekTutar += yapilanIslem.Miktar;
                     return true;
                 }

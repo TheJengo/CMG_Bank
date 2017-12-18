@@ -136,6 +136,13 @@
         TgAAAABJRU5ErkJggg==
 </value>
   </data>
+  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
+        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA9SURBVChTY1hz9sn/LZee/99z/dX/o3fe/D/78P3/q88+
+        /r/3+sv/Zx++/3/39ef/b7/+/B9VSFeFf/4DAJkbbAIuepgiAAAAAElFTkSuQmCC
+</value>
+  </data>
   <data name="bgpBireysel.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
@@ -185,13 +192,6 @@
         tAWj3+dlzyoVsFg72mAQAtzF40ZoiKt6PdSzC3lvtQTAk6KMQ9eos2t8q9WERNS0WIQp2/PHJsnkufQh
         zbJZIVGmR0W55i9R9pT/g9wnEssbQk48gAcRfiYZ5AFPJuTY9XkAR8Hf+SWT+WHT3jDj+DmVOhPzgfwB
         fmwxIVcX0+gAAAAASUVORK5CYII=
-</value>
-  </data>
-  <data name="bunifuGradientPanel2.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAA9SURBVChTY1hz9sn/LZee/99z/dX/o3fe/D/78P3/q88+
-        /r/3+sv/Zx++/3/39ef/b7/+/B9VSFeFf/4DAJkbbAIuepgiAAAAAElFTkSuQmCC
 </value>
   </data>
   <data name="bunifuGradientPanel5.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">

@@ -29,6 +29,10 @@ namespace CMG_Bank
         {
             this.Hesaplar.Add(H);
         }
+        public List<Personel> PersonelListesi()
+        {
+            return this.Personeller;
+        }
         public void PersonelEkle(Personel P)
         {
             int personelSayac = 0;

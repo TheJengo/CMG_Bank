@@ -37,6 +37,8 @@
             this.bunifuGradientPanel2 = new Bunifu.Framework.UI.BunifuGradientPanel();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.bgpBireysel = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtBireyselSifre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtBireyselNo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblBireyselSonuc = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblSifreSor = new System.Windows.Forms.Label();
@@ -46,6 +48,8 @@
             this.lblNo = new System.Windows.Forms.Label();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.bunifuGradientPanel4 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtTicariSifre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtTicariNo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.lblTicariSonuc = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -55,6 +59,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.bunifuGradientPanel5 = new Bunifu.Framework.UI.BunifuGradientPanel();
+            this.txtPersonelSifre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
+            this.txtPersonelNo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
@@ -68,16 +74,10 @@
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse2 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse3 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtBireyselNo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtBireyselSifre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse4 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse5 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtTicariSifre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtTicariNo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse6 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse7 = new Bunifu.Framework.UI.BunifuElipse(this.components);
-            this.txtPersonelSifre = new Bunifu.Framework.UI.BunifuMaterialTextbox();
-            this.txtPersonelNo = new Bunifu.Framework.UI.BunifuMaterialTextbox();
             this.bunifuElipse8 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.bunifuElipse9 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.panel1.SuspendLayout();
@@ -101,7 +101,7 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.ForeColor = System.Drawing.Color.White;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(675, 24);
             this.panel1.TabIndex = 0;
@@ -114,7 +114,7 @@
             this.bunifuImageButton1.ImageActive = null;
             this.bunifuImageButton1.InitialImage = null;
             this.bunifuImageButton1.Location = new System.Drawing.Point(646, 2);
-            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuImageButton1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuImageButton1.Name = "bunifuImageButton1";
             this.bunifuImageButton1.Size = new System.Drawing.Size(29, 20);
             this.bunifuImageButton1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
@@ -132,7 +132,7 @@
             this.tabKontrol.Depth = 0;
             this.tabKontrol.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.tabKontrol.Location = new System.Drawing.Point(0, 73);
-            this.tabKontrol.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabKontrol.Margin = new System.Windows.Forms.Padding(2);
             this.tabKontrol.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabKontrol.Name = "tabKontrol";
             this.tabKontrol.SelectedIndex = 0;
@@ -145,9 +145,9 @@
             this.tabPage1.Controls.Add(this.bunifuGradientPanel2);
             this.tabPage1.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
-            this.tabPage1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage1.Size = new System.Drawing.Size(667, 307);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "hoşgeldiniz";
@@ -163,7 +163,7 @@
             this.bunifuGradientPanel2.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(89)))), ((int)(((byte)(155)))), ((int)(((byte)(202)))));
             this.bunifuGradientPanel2.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel2.Location = new System.Drawing.Point(-14, 0);
-            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel2.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel2.Name = "bunifuGradientPanel2";
             this.bunifuGradientPanel2.Quality = 10;
             this.bunifuGradientPanel2.Size = new System.Drawing.Size(708, 339);
@@ -176,9 +176,9 @@
             this.tabPage2.Controls.Add(this.bgpBireysel);
             this.tabPage2.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
-            this.tabPage2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage2.Size = new System.Drawing.Size(667, 307);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "bireysel";
@@ -203,11 +203,50 @@
             this.bgpBireysel.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.bgpBireysel.GradientTopRight = System.Drawing.Color.White;
             this.bgpBireysel.Location = new System.Drawing.Point(0, 0);
-            this.bgpBireysel.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bgpBireysel.Margin = new System.Windows.Forms.Padding(2);
             this.bgpBireysel.Name = "bgpBireysel";
             this.bgpBireysel.Quality = 10;
             this.bgpBireysel.Size = new System.Drawing.Size(675, 333);
             this.bgpBireysel.TabIndex = 0;
+            // 
+            // txtBireyselSifre
+            // 
+            this.txtBireyselSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBireyselSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtBireyselSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBireyselSifre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtBireyselSifre.HintText = "";
+            this.txtBireyselSifre.isPassword = true;
+            this.txtBireyselSifre.LineFocusedColor = System.Drawing.Color.OrangeRed;
+            this.txtBireyselSifre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBireyselSifre.LineMouseHoverColor = System.Drawing.Color.DeepPink;
+            this.txtBireyselSifre.LineThickness = 3;
+            this.txtBireyselSifre.Location = new System.Drawing.Point(439, 136);
+            this.txtBireyselSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBireyselSifre.Name = "txtBireyselSifre";
+            this.txtBireyselSifre.Size = new System.Drawing.Size(223, 33);
+            this.txtBireyselSifre.TabIndex = 17;
+            this.txtBireyselSifre.Text = "Şifre";
+            this.txtBireyselSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtBireyselNo
+            // 
+            this.txtBireyselNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtBireyselNo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtBireyselNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtBireyselNo.HintForeColor = System.Drawing.Color.Empty;
+            this.txtBireyselNo.HintText = "12345678";
+            this.txtBireyselNo.isPassword = false;
+            this.txtBireyselNo.LineFocusedColor = System.Drawing.Color.OrangeRed;
+            this.txtBireyselNo.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtBireyselNo.LineMouseHoverColor = System.Drawing.Color.DeepPink;
+            this.txtBireyselNo.LineThickness = 3;
+            this.txtBireyselNo.Location = new System.Drawing.Point(439, 70);
+            this.txtBireyselNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBireyselNo.Name = "txtBireyselNo";
+            this.txtBireyselNo.Size = new System.Drawing.Size(223, 33);
+            this.txtBireyselNo.TabIndex = 16;
+            this.txtBireyselNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblBireyselSonuc
             // 
@@ -252,7 +291,7 @@
             // 
             this.panel3.BackColor = System.Drawing.Color.Black;
             this.panel3.Location = new System.Drawing.Point(436, 232);
-            this.panel3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(2);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(223, 2);
             this.panel3.TabIndex = 11;
@@ -279,7 +318,7 @@
             this.btnMusteriGiris.IconZoom = 90D;
             this.btnMusteriGiris.IsTab = false;
             this.btnMusteriGiris.Location = new System.Drawing.Point(439, 184);
-            this.btnMusteriGiris.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnMusteriGiris.Margin = new System.Windows.Forms.Padding(4);
             this.btnMusteriGiris.Name = "btnMusteriGiris";
             this.btnMusteriGiris.Normalcolor = System.Drawing.Color.Silver;
             this.btnMusteriGiris.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
@@ -322,9 +361,9 @@
             this.tabPage3.Controls.Add(this.bunifuGradientPanel4);
             this.tabPage3.Font = new System.Drawing.Font("Century Gothic", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
-            this.tabPage3.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage3.Size = new System.Drawing.Size(667, 307);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "ticari";
@@ -349,11 +388,50 @@
             this.bunifuGradientPanel4.GradientTopLeft = System.Drawing.Color.Gold;
             this.bunifuGradientPanel4.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel4.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel4.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel4.Name = "bunifuGradientPanel4";
             this.bunifuGradientPanel4.Quality = 10;
             this.bunifuGradientPanel4.Size = new System.Drawing.Size(675, 333);
             this.bunifuGradientPanel4.TabIndex = 0;
+            // 
+            // txtTicariSifre
+            // 
+            this.txtTicariSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTicariSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtTicariSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTicariSifre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtTicariSifre.HintText = "";
+            this.txtTicariSifre.isPassword = true;
+            this.txtTicariSifre.LineFocusedColor = System.Drawing.Color.OrangeRed;
+            this.txtTicariSifre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtTicariSifre.LineMouseHoverColor = System.Drawing.Color.DeepPink;
+            this.txtTicariSifre.LineThickness = 3;
+            this.txtTicariSifre.Location = new System.Drawing.Point(439, 136);
+            this.txtTicariSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTicariSifre.Name = "txtTicariSifre";
+            this.txtTicariSifre.Size = new System.Drawing.Size(223, 33);
+            this.txtTicariSifre.TabIndex = 20;
+            this.txtTicariSifre.Text = "Şifre";
+            this.txtTicariSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtTicariNo
+            // 
+            this.txtTicariNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtTicariNo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtTicariNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtTicariNo.HintForeColor = System.Drawing.Color.Empty;
+            this.txtTicariNo.HintText = "12345678";
+            this.txtTicariNo.isPassword = false;
+            this.txtTicariNo.LineFocusedColor = System.Drawing.Color.OrangeRed;
+            this.txtTicariNo.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtTicariNo.LineMouseHoverColor = System.Drawing.Color.DeepPink;
+            this.txtTicariNo.LineThickness = 3;
+            this.txtTicariNo.Location = new System.Drawing.Point(439, 70);
+            this.txtTicariNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtTicariNo.Name = "txtTicariNo";
+            this.txtTicariNo.Size = new System.Drawing.Size(223, 33);
+            this.txtTicariNo.TabIndex = 19;
+            this.txtTicariNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // lblTicariSonuc
             // 
@@ -398,7 +476,7 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.Black;
             this.panel2.Location = new System.Drawing.Point(436, 232);
-            this.panel2.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(223, 2);
             this.panel2.TabIndex = 14;
@@ -469,9 +547,9 @@
             // 
             this.tabPage4.Controls.Add(this.bunifuGradientPanel5);
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
-            this.tabPage4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Margin = new System.Windows.Forms.Padding(2);
             this.tabPage4.Name = "tabPage4";
-            this.tabPage4.Padding = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabPage4.Padding = new System.Windows.Forms.Padding(2);
             this.tabPage4.Size = new System.Drawing.Size(667, 307);
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "yönetici";
@@ -496,11 +574,50 @@
             this.bunifuGradientPanel5.GradientTopLeft = System.Drawing.Color.FromArgb(((int)(((byte)(183)))), ((int)(((byte)(139)))), ((int)(((byte)(218)))));
             this.bunifuGradientPanel5.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel5.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel5.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel5.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel5.Name = "bunifuGradientPanel5";
             this.bunifuGradientPanel5.Quality = 10;
             this.bunifuGradientPanel5.Size = new System.Drawing.Size(675, 333);
             this.bunifuGradientPanel5.TabIndex = 0;
+            // 
+            // txtPersonelSifre
+            // 
+            this.txtPersonelSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPersonelSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPersonelSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPersonelSifre.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPersonelSifre.HintText = "";
+            this.txtPersonelSifre.isPassword = true;
+            this.txtPersonelSifre.LineFocusedColor = System.Drawing.Color.OrangeRed;
+            this.txtPersonelSifre.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPersonelSifre.LineMouseHoverColor = System.Drawing.Color.DeepPink;
+            this.txtPersonelSifre.LineThickness = 3;
+            this.txtPersonelSifre.Location = new System.Drawing.Point(439, 136);
+            this.txtPersonelSifre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPersonelSifre.Name = "txtPersonelSifre";
+            this.txtPersonelSifre.Size = new System.Drawing.Size(223, 33);
+            this.txtPersonelSifre.TabIndex = 28;
+            this.txtPersonelSifre.Text = "Şifre";
+            this.txtPersonelSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
+            // 
+            // txtPersonelNo
+            // 
+            this.txtPersonelNo.Cursor = System.Windows.Forms.Cursors.IBeam;
+            this.txtPersonelNo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
+            this.txtPersonelNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.txtPersonelNo.HintForeColor = System.Drawing.Color.Empty;
+            this.txtPersonelNo.HintText = "12345678";
+            this.txtPersonelNo.isPassword = false;
+            this.txtPersonelNo.LineFocusedColor = System.Drawing.Color.OrangeRed;
+            this.txtPersonelNo.LineIdleColor = System.Drawing.Color.Gray;
+            this.txtPersonelNo.LineMouseHoverColor = System.Drawing.Color.DeepPink;
+            this.txtPersonelNo.LineThickness = 3;
+            this.txtPersonelNo.Location = new System.Drawing.Point(439, 70);
+            this.txtPersonelNo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtPersonelNo.Name = "txtPersonelNo";
+            this.txtPersonelNo.Size = new System.Drawing.Size(223, 33);
+            this.txtPersonelNo.TabIndex = 27;
+            this.txtPersonelNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // label7
             // 
@@ -548,7 +665,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.Black;
             this.panel4.Location = new System.Drawing.Point(436, 232);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(223, 2);
             this.panel4.TabIndex = 23;
@@ -587,6 +704,7 @@
             this.btnPersonelGiris.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnPersonelGiris.Textcolor = System.Drawing.Color.Black;
             this.btnPersonelGiris.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.btnPersonelGiris.Click += new System.EventHandler(this.btnPersonelGiris_Click);
             // 
             // label10
             // 
@@ -625,7 +743,7 @@
             this.bunifuGradientPanel1.GradientTopLeft = System.Drawing.Color.White;
             this.bunifuGradientPanel1.GradientTopRight = System.Drawing.Color.White;
             this.bunifuGradientPanel1.Location = new System.Drawing.Point(0, 0);
-            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.bunifuGradientPanel1.Margin = new System.Windows.Forms.Padding(2);
             this.bunifuGradientPanel1.Name = "bunifuGradientPanel1";
             this.bunifuGradientPanel1.Quality = 10;
             this.bunifuGradientPanel1.Size = new System.Drawing.Size(675, 406);
@@ -636,7 +754,7 @@
             this.tabSecici.BaseTabControl = this.tabKontrol;
             this.tabSecici.Depth = 0;
             this.tabSecici.Location = new System.Drawing.Point(0, 24);
-            this.tabSecici.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tabSecici.Margin = new System.Windows.Forms.Padding(2);
             this.tabSecici.MouseState = MaterialSkin.MouseState.HOVER;
             this.tabSecici.Name = "tabSecici";
             this.tabSecici.Size = new System.Drawing.Size(675, 49);
@@ -665,45 +783,6 @@
             this.bunifuElipse3.ElipseRadius = 50;
             this.bunifuElipse3.TargetControl = this.btnPersonelGiris;
             // 
-            // txtBireyselNo
-            // 
-            this.txtBireyselNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBireyselNo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBireyselNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBireyselNo.HintForeColor = System.Drawing.Color.Empty;
-            this.txtBireyselNo.HintText = "12345678";
-            this.txtBireyselNo.isPassword = false;
-            this.txtBireyselNo.LineFocusedColor = System.Drawing.Color.OrangeRed;
-            this.txtBireyselNo.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtBireyselNo.LineMouseHoverColor = System.Drawing.Color.DeepPink;
-            this.txtBireyselNo.LineThickness = 3;
-            this.txtBireyselNo.Location = new System.Drawing.Point(439, 70);
-            this.txtBireyselNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBireyselNo.Name = "txtBireyselNo";
-            this.txtBireyselNo.Size = new System.Drawing.Size(223, 33);
-            this.txtBireyselNo.TabIndex = 16;
-            this.txtBireyselNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtBireyselSifre
-            // 
-            this.txtBireyselSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtBireyselSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtBireyselSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtBireyselSifre.HintForeColor = System.Drawing.Color.Empty;
-            this.txtBireyselSifre.HintText = "";
-            this.txtBireyselSifre.isPassword = true;
-            this.txtBireyselSifre.LineFocusedColor = System.Drawing.Color.OrangeRed;
-            this.txtBireyselSifre.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtBireyselSifre.LineMouseHoverColor = System.Drawing.Color.DeepPink;
-            this.txtBireyselSifre.LineThickness = 3;
-            this.txtBireyselSifre.Location = new System.Drawing.Point(439, 136);
-            this.txtBireyselSifre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBireyselSifre.Name = "txtBireyselSifre";
-            this.txtBireyselSifre.Size = new System.Drawing.Size(223, 33);
-            this.txtBireyselSifre.TabIndex = 17;
-            this.txtBireyselSifre.Text = "Şifre";
-            this.txtBireyselSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // bunifuElipse4
             // 
             this.bunifuElipse4.ElipseRadius = 10;
@@ -714,45 +793,6 @@
             this.bunifuElipse5.ElipseRadius = 10;
             this.bunifuElipse5.TargetControl = this.txtBireyselSifre;
             // 
-            // txtTicariSifre
-            // 
-            this.txtTicariSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTicariSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtTicariSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTicariSifre.HintForeColor = System.Drawing.Color.Empty;
-            this.txtTicariSifre.HintText = "";
-            this.txtTicariSifre.isPassword = true;
-            this.txtTicariSifre.LineFocusedColor = System.Drawing.Color.OrangeRed;
-            this.txtTicariSifre.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtTicariSifre.LineMouseHoverColor = System.Drawing.Color.DeepPink;
-            this.txtTicariSifre.LineThickness = 3;
-            this.txtTicariSifre.Location = new System.Drawing.Point(439, 136);
-            this.txtTicariSifre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTicariSifre.Name = "txtTicariSifre";
-            this.txtTicariSifre.Size = new System.Drawing.Size(223, 33);
-            this.txtTicariSifre.TabIndex = 20;
-            this.txtTicariSifre.Text = "Şifre";
-            this.txtTicariSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtTicariNo
-            // 
-            this.txtTicariNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtTicariNo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtTicariNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtTicariNo.HintForeColor = System.Drawing.Color.Empty;
-            this.txtTicariNo.HintText = "12345678";
-            this.txtTicariNo.isPassword = false;
-            this.txtTicariNo.LineFocusedColor = System.Drawing.Color.OrangeRed;
-            this.txtTicariNo.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtTicariNo.LineMouseHoverColor = System.Drawing.Color.DeepPink;
-            this.txtTicariNo.LineThickness = 3;
-            this.txtTicariNo.Location = new System.Drawing.Point(439, 70);
-            this.txtTicariNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtTicariNo.Name = "txtTicariNo";
-            this.txtTicariNo.Size = new System.Drawing.Size(223, 33);
-            this.txtTicariNo.TabIndex = 19;
-            this.txtTicariNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
             // bunifuElipse6
             // 
             this.bunifuElipse6.ElipseRadius = 10;
@@ -762,45 +802,6 @@
             // 
             this.bunifuElipse7.ElipseRadius = 10;
             this.bunifuElipse7.TargetControl = this.txtTicariSifre;
-            // 
-            // txtPersonelSifre
-            // 
-            this.txtPersonelSifre.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPersonelSifre.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPersonelSifre.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPersonelSifre.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPersonelSifre.HintText = "";
-            this.txtPersonelSifre.isPassword = true;
-            this.txtPersonelSifre.LineFocusedColor = System.Drawing.Color.OrangeRed;
-            this.txtPersonelSifre.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPersonelSifre.LineMouseHoverColor = System.Drawing.Color.DeepPink;
-            this.txtPersonelSifre.LineThickness = 3;
-            this.txtPersonelSifre.Location = new System.Drawing.Point(439, 136);
-            this.txtPersonelSifre.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPersonelSifre.Name = "txtPersonelSifre";
-            this.txtPersonelSifre.Size = new System.Drawing.Size(223, 33);
-            this.txtPersonelSifre.TabIndex = 28;
-            this.txtPersonelSifre.Text = "Şifre";
-            this.txtPersonelSifre.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
-            // 
-            // txtPersonelNo
-            // 
-            this.txtPersonelNo.Cursor = System.Windows.Forms.Cursors.IBeam;
-            this.txtPersonelNo.Font = new System.Drawing.Font("Century Gothic", 9.75F);
-            this.txtPersonelNo.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.txtPersonelNo.HintForeColor = System.Drawing.Color.Empty;
-            this.txtPersonelNo.HintText = "12345678";
-            this.txtPersonelNo.isPassword = false;
-            this.txtPersonelNo.LineFocusedColor = System.Drawing.Color.OrangeRed;
-            this.txtPersonelNo.LineIdleColor = System.Drawing.Color.Gray;
-            this.txtPersonelNo.LineMouseHoverColor = System.Drawing.Color.DeepPink;
-            this.txtPersonelNo.LineThickness = 3;
-            this.txtPersonelNo.Location = new System.Drawing.Point(439, 70);
-            this.txtPersonelNo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtPersonelNo.Name = "txtPersonelNo";
-            this.txtPersonelNo.Size = new System.Drawing.Size(223, 33);
-            this.txtPersonelNo.TabIndex = 27;
-            this.txtPersonelNo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
             // bunifuElipse8
             // 
@@ -822,7 +823,7 @@
             this.Controls.Add(this.bunifuGradientPanel1);
             this.ForeColor = System.Drawing.Color.White;
             this.ImeMode = System.Windows.Forms.ImeMode.On;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Giris_Ekrani";
             this.Text = "-";
             this.panel1.ResumeLayout(false);

@@ -18,6 +18,7 @@ namespace CMG_Bank
             this.Maas = Maas;
             this.sifre = sifre;
             IseAlimTarihi = DateTime.Now;
+            Banka.BankaBilgisiGetir().SeciliSube().SeciliHesap().IslemYap(new Cek(Banka.BankaBilgisiGetir().SeciliSube().Hesaplar.ElementAt(0).HesapNo, this.Maas));
         }
         public bool GirisYap(string PersonelNo, string gelenSifre)
         {
