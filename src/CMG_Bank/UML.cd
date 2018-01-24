@@ -1,0 +1,233 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1" MembersFormat="FullSignature">
+  <Class Name="CMG_Bank.Banka">
+    <Position X="8.5" Y="3.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>REICIFQgAAEIAAAAACAAAKQAgAEkCAQgCAAABBAwIAg=</HashCode>
+      <FileName>Banka.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="Musteri" />
+      <Property Name="Sube" />
+      <Property Name="Kur" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="CMG_Bank.Bireysel">
+    <Position X="17" Y="13.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Bireysel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Calisan">
+    <Position X="2.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Calisan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Cek">
+    <Position X="0.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Cek.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Ceo">
+    <Position X="0.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ceo.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Doviz">
+    <Position X="11.25" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Doviz.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.doviz_Islem" Collapsed="true">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>cIAAAQQAACCSABQAAEKAJADCAwGACgAAAQgCAACBgAA=</HashCode>
+      <FileName>doviz_Islem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.EkHesap" BaseTypeListCollapsed="true">
+    <Position X="6.25" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAEgKICABAAAAEIAQAACAAAAAAoAAEAAAACAAA=</HashCode>
+      <FileName>EkHesap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="CMG_Bank.Form1" Collapsed="true">
+    <Position X="17.5" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAACAFAAAAAECAAAACACABAEABALAAAmAAAkg=</HashCode>
+      <FileName>Form1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Giris_Ekrani" Collapsed="true">
+    <Position X="19.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>MAiAAJAQEKAAQBSAEECRYACSAAAikuEeAAIASQABQIQ=</HashCode>
+      <FileName>Giris_Ekrani.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Havale">
+    <Position X="5.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAEAEQAAACAAAAAAAAAAIAAAAAAAAAAAA=</HashCode>
+      <FileName>Havale.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Hesap">
+    <Position X="10" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAgUAIACAAAAAAAIAAAAAAAAAAAsAIEAgAAAAAA=</HashCode>
+      <FileName>Hesap.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="CMG_Bank.Islem">
+    <Position X="3.75" Y="15.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAoAAAIAAAAAAAAAAAAAQAAAAAAAAA=</HashCode>
+      <FileName>Islem.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Kimlik">
+    <Position X="5.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAIAAAAAAAAAAAAAAAAAAAAAAAAAABAACAAAAAAAAAA=</HashCode>
+      <FileName>Kimlik.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Kur">
+    <Position X="8.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACAAAIAAAAAAAAAAAAAAAAAAAQAAAAAAAAEAAAAAAA=</HashCode>
+      <FileName>Kur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Mudur">
+    <Position X="4.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Mudur.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Musteri">
+    <Position X="14.5" Y="11" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAEAABAAAAAIQAAAA+AgAAAAAEIQICACAAAA=</HashCode>
+      <FileName>Musteri.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.musteri_Ekle" Collapsed="true">
+    <Position X="14" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAABQAADSIRABAAAEGAAASCEAAAAAABAAgAEIABACA=</HashCode>
+      <FileName>musteri_Ekle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Musteri_Ekrani" Collapsed="true">
+    <Position X="15.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/zVa3I+PT7b8v3+qd06dz3P+56S/T6x4uKkrW+i8fvI=</HashCode>
+      <FileName>Musteri_Ekrani.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.musteri_Listele" Collapsed="true">
+    <Position X="17.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAEAACAAABAAAECAAAD6AwCAAAAAAAACAAAAAAA=</HashCode>
+      <FileName>musteri_Listele.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Personel">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAEAAAAAAAAAAQAAAIAAAAgAAAAAACACEAAA=</HashCode>
+      <FileName>Personel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Personel_Ekrani" Collapsed="true">
+    <Position X="19.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>/0TEEIlAhiGTBBi4wnOyEkr+Q7WXUSBo8TnCfOCyWrE=</HashCode>
+      <FileName>Personel_Ekrani.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.personel_Yonet" Collapsed="true">
+    <Position X="14" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACQEABAACATABABAFKCAADCAyCSAAAAkAgCAAACAAA=</HashCode>
+      <FileName>personel_Yonet.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Program" Collapsed="true">
+    <Position X="15.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Sube">
+    <Position X="3" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>SAIAAAAgAAAAAAAAIAIQAAAAiAgMAAAAAQAICgAAAAA=</HashCode>
+      <FileName>Sube.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Ticari">
+    <Position X="17" Y="11.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Ticari.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.TRY" Collapsed="true">
+    <Position X="8.75" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>TRY.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Yatir">
+    <Position X="3" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Yatir.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Properties.Resources" Collapsed="true">
+    <Position X="17.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Properties.Settings" Collapsed="true">
+    <Position X="19.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CMG_Bank.Bilgi_Ekrani" Collapsed="true">
+    <Position X="15.75" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEACAAAEACAAABBIAECAAAAiEJABEAAAAAAABQkAAAQ=</HashCode>
+      <FileName>Bilgi_Ekrani.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="CMG_Bank.IIslenebilen">
+    <Position X="14" Y="3.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAAA=</HashCode>
+      <FileName>IIslenebilen.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
